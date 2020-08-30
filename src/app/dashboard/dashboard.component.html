@@ -1,0 +1,18 @@
+<div class="selector">
+  <mat-card>
+    <mat-form-field appearance="outline" class="formField">
+      <mat-label>Select Charactor</mat-label>
+      <mat-select (selectionChange)="onHeroChange($event)">
+        <mat-option *ngFor="let hero of heroes" [value]="hero.url"
+          >{{hero.name}}</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+  </mat-card>
+</div>
+<div class="cards">
+  <mat-card *ngFor="let film of films">
+    <mat-card-title>{{film.title}}</mat-card-title>
+    <mat-card-content>{{film.opening_crawl}}</mat-card-content>
+  </mat-card>
+</div>
